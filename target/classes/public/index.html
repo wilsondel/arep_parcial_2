@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Collatz Sequence</title>
+</head>
+
+<body>
+
+
+<h2>collatzSequence with "GET"</h2>
+
+<form>
+    <label for="numberGet">Number </label><br>
+    <input type="text" id="numberGet" name="numberGet" value="13"><br><br>
+    <input type="button" value="Submit" onclick="getInfo(numberGet)">
+</form>
+
+<div id="getResponse"></div>
+
+
+<h2>collatzSequence with "POST"</h2>
+<form>
+    <label for="numberPost">Number </label><br>
+    <input type="text" id="numberPost" name="name" value="13"><br><br>
+    <input type="button" value="Submit" onclick="postInfo(numberPost)">
+</form>
+
+<div id="postResponse"></div>
+
+<script>
+
+    function getInfo(numberGet) {
+        let url = "/collatzsequence?value=" + numberGet.value;
+        fetch (url, {method: 'GET'})
+            .then(data => data.text())
+            .then(text => document.getElementById("getResponse").innerHTML = text);
+    }
+
+
+    function postInfo(numberPost){
+        let url = "/collatzsequence?value=" + numberPost.value;
+        fetch (url, {method: 'POST'})
+            .then(data => data.text())
+            .then(text => document.getElementById("postResponse").innerHTML = text);
+    }
+
+</script>
+
+</body>
+</html>
