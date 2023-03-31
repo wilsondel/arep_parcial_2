@@ -44,42 +44,42 @@ Luego, puede acceder a la ruta:
 
 http://localhost:4567/index.html
 
-![img_4.png](img_4.png)
+![img_4.png](img/img_4.png)
 
 
 ## Evidencia funcionamiento
 
 La instancia ec2 y corriendo el contenedor docker:
 
-![img.png](img.png)
+![img.png](img/img.png)
 
 
 Imagen en docker hub:
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 
 https://hub.docker.com/u/wilsondel
 
 
 Accediendo a http://ec2-44-201-209-154.compute-1.amazonaws.com:4567/index.html se tiene:
 
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 
 Probando los diferentes servicios:
 
-![img_3.png](img_3.png)
+![img_3.png](img/img_3.png)
 
 
 
 Ejemplo de llamado desde URL en local:
 
-![img_7.png](img_7.png)
+![img_7.png](img/img_7.png)
 
 
 
 Ejemplo de llamado desde URL en aws:
 
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 
 
@@ -100,16 +100,19 @@ sudo service docker start
 docker run -d -p 4567:4567 --name firstdockerimageaws wilsondel/collatzsequence
 ```
 
-![img_5.png](img_5.png)
+![img_5.png](img/img_5.png)
 
 
 De esta forma, se puede acceder a Ahora se puede acceder a http://ec2-44-201-209-154.compute-1.amazonaws.com:4567/index.html :
 
 
-![img_6.png](img_6.png)
+![img_6.png](img/img_6.png)
 
 
 
+## video
+
+https://photos.app.goo.gl/wkxBRx1NQUogAxcSA
 
 
 
